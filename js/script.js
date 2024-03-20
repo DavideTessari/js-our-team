@@ -57,3 +57,23 @@ const classi = [
         classImage: 'img/barbara-ramos-graphic-designer.jpg'
     }
 ];
+
+// MILESTONE 1:
+// Stampare su console, per ogni membro del team, le informazioni di 
+// nome, ruolo e la stringa della foto
+console.log(classi);
+
+// MILESTONE 2:
+// Stampare le stesse informazioni su DOM sottoforma di stringhe
+const mainContainer = document.querySelector('#list')
+for(let i = 0; i < classi.length; i++) {
+    const thisClassi = classi[i];
+
+    const newLi = `
+        <li>
+            <h3>${thisClassi.className}: ${thisClassi.classRole} ---- ${thisClassi.classImage}</h3>
+        </li>
+    `;
+
+    mainContainer.innerHTML += newLi;
+}
